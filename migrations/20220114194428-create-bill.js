@@ -50,6 +50,24 @@ module.exports = {
       latestAction: {
         type: Sequelize.STRING
       },
+      categoryId: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
+        references: {
+          model: 'categories',
+          key: 'id'
+        }
+      },
+      userId: {
+        type: Sequelize.INTEGER,
+      onDelete: 'CASCADE',
+      onUpdate: 'CASCADE',
+      references: {
+        model: 'users',
+        key: 'id'
+      }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
