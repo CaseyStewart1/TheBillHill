@@ -9,6 +9,7 @@ export const LoadBills = () => {
                 type: GET_BILLS,
                 payload: bills
             })
+            // console.log(bills)
         } catch (error) {
             throw error
         }
