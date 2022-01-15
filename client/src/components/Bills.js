@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { connect} from "react-redux";
 import { LoadBills } from "../store/actions/BillAction";
+import { Link } from 'react-router-dom'
 
 
 const mapDispatchToProps = (dispatch) => {
@@ -11,11 +12,8 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps = (state) => {
-    // console.log(state.billState)
     return {billState: state.billState }
 }
-
-// console.log(billState)
 
 
 const Home = (props) => {
@@ -31,11 +29,11 @@ const Home = (props) => {
                 <div key={e.bill_id}> 
                     <li>
                         {e.title}
-                        <a href={`${e.govtrack_url}`} target='_blank'> more info </a>
+                        {/* <a href={`${e.govtrack_url}`} target='_blank' rel="noreferrer"> more info </a> */}
+                        <Link to={`/bills/${e.bill_id}`}> Details </Link>
                     </li>
                 </div>
             ))}
-            {/* {console.log(props.billState)} */}
         </div>
     )
 }
