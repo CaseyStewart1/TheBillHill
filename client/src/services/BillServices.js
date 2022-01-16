@@ -28,3 +28,17 @@ export const GetBillById = async (billId) => {
         throw error
     }
 }
+
+export const GetStatements = async () => {
+    try {
+        const response = await axios.get(`https://api.propublica.org/congress/v1/statements/latest.json`, {
+            headers: {
+                'X-API-Key': `Q2vP0osGpYnRKlCzFe7stoMYp8n88Yv5bwP1ZUwU`
+            }
+        })
+        // console.log(response)
+        return response.data.results
+    } catch (error) {
+        throw error
+    }
+}
