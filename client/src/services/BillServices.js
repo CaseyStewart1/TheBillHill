@@ -16,14 +16,13 @@ export const GetBills = async () => {
 }
 
 export const GetBillById = async (billId) => {
-    console.log(billId)
     try {
         const response = await axios.get(`https://api.propublica.org/congress/v1/117/bills/${billId}.json`, {
             headers: {
                 'X-API-Key': `Q2vP0osGpYnRKlCzFe7stoMYp8n88Yv5bwP1ZUwU`
             }
         })
-        console.log(billId)
+        // console.log(billId)
         return response.data.results
     } catch (error) {
         throw error
