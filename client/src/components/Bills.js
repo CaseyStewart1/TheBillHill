@@ -24,7 +24,7 @@ const Home = (props) => {
         props.fetchBills()
     }, [])
 
-    
+    console.log(props.match)
 
     return (
         <div>

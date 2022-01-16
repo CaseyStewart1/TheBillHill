@@ -25,6 +25,9 @@ const Details = (props) => {
         props.fetchDetails(congress)
     }, [congress])
 
+
+    console.log(props.match)
+
     return (
         <div>
             { props.billState.isLoading ? <p> loading </p> : <div> {props.billState.bill.map( (e) => (
