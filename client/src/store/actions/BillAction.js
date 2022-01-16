@@ -1,5 +1,5 @@
-import { GetBillById, GetBills, GetStatements } from "../../services/BillServices";
-import { GET_BILLS, GET_BILL_BY_ID, GET_STATEMENTS, IS_LOADING } from "../types";
+import { GetActiveBills, GetBillById, GetBills, GetPassedBills, GetStatements } from "../../services/BillServices";
+import { GET_ACTIVE_BILLS, GET_BILLS, GET_BILL_BY_ID, GET_PASSED_BILLS, GET_STATEMENTS, IS_LOADING } from "../types";
 
 export const LoadBills = () => {
     return async (dispatch) => {
@@ -10,6 +10,34 @@ export const LoadBills = () => {
                 payload: bills
             })
             // console.log(bills)
+        } catch (error) {
+            throw error
+        }
+    }
+}
+
+export const LoadActiveBills = () => {
+    return async (dispatch) => {
+        try {
+            const activeBills = await GetActiveBills()
+            dispatch({
+                type: GET_ACTIVE_BILLS,
+                payload: activeBills
+            })
+        } catch (error) {
+            throw error
+        }
+    }
+}
+
+export const LoadPassedBills = () => {
+    return async (dispatch) => {
+        try {
+            const passedBills = await GetPassedBills()
+            dispatch({
+                type: GET_PASSED_BILLS,
+                payload: passedBills
+            })
         } catch (error) {
             throw error
         }
