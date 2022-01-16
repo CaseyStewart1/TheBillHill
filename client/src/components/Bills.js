@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { connect} from "react-redux";
+import { connect } from "react-redux";
 import { LoadBills } from "../store/actions/BillAction";
 import { Link } from 'react-router-dom'
 
@@ -22,6 +22,8 @@ const Home = (props) => {
         props.fetchBills()
     }, [])
 
+    
+
     return (
         <div>
             These are some bills
@@ -29,7 +31,6 @@ const Home = (props) => {
                 <div key={e.bill_id}> 
                     <li>
                         {e.title}
-                        {/* <a href={`${e.govtrack_url}`} target='_blank' rel="noreferrer"> more info </a> */}
                         <Link to={`/bills/${e.bill_id}`}> Details </Link>
                     </li>
                 </div>

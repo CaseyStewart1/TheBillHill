@@ -18,14 +18,21 @@ const Details = (props) => {
 
     const { id } = useParams()
     const congress = id.substring(0, id.indexOf('-'))
+    // const bill = props.billState
+    console.log(props.billState)
 
     useEffect(() => {
         props.fetchDetails(congress)
-    }, [])
+    }, [congress])
 
     return (
         <div>
-            these are some details
+            { props.billState.isLoading ? <p> loading </p> : <div> {props.billState.bill.map( (e) => (
+                <div key={e.bill_id}> 
+                    {e.title}
+                    <a href={`${e.govtrack_url}`} target={`_blank`} rel="noreferred"> more details </a>
+                </div>
+            ))} </div>}
         </div>
     )
 }

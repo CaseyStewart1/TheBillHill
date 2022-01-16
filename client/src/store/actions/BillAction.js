@@ -1,5 +1,5 @@
 import { GetBillById, GetBills } from "../../services/BillServices";
-import { GET_BILLS, GET_BILL_BY_ID } from "../types";
+import { GET_BILLS, GET_BILL_BY_ID, IS_LOADING } from "../types";
 
 export const LoadBills = () => {
     return async (dispatch) => {
@@ -24,7 +24,12 @@ export const LoadBillById = (congress) => {
                 type: GET_BILL_BY_ID,
                 payload: bill
             })
-            console.log(bill)
+            dispatch({
+                type: IS_LOADING,
+                payload: false,
+            })
+
+            // console.log(bill)
         } catch (error) {
             throw error
         }
