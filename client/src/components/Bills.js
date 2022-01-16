@@ -12,7 +12,9 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps = (state) => {
-    return {billState: state.billState }
+    return {
+        billState: state.billState 
+    }
 }
 
 
