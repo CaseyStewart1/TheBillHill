@@ -47,16 +47,42 @@ const Bill = (props) => {
                     <button onClick={() => updateRender(1)}>Active</button> <button onClick={() => updateRender(0)}>Introduced</button> 
                 </div> : null}
                 
-
-            Introduced bills:
-            {props.billState.bills.map( (e) => (
-                <div key={e.bill_id}> 
-                    <li>
-                        {e.title}
-                        <Link to={`/bills/${e.bill_id}`}> Details </Link>
-                    </li>
-                </div>
+            {render === 0 ? <div>
+                Introduced bills:
+                {props.billState.bills.map( (e) => (
+                    <div key={e.bill_id}> 
+                        <li>
+                            {e.title}
+                            <Link to={`/bills/${e.bill_id}`}> Details </Link>
+                        </li>
+                    </div>
             ))}
+            </div> : null}
+
+            {render === 1 ? <div>
+                Active bills:
+                {props.billState.activeBills.map( (e) => (
+                    <div key={e.bill_id}> 
+                        <li>
+                            {e.title}
+                            <Link to={`/bills/${e.bill_id}`}> Details </Link>
+                        </li>
+                    </div>
+                ))}
+            </div> : null}
+
+            {render === 2 ? <div>
+                Passed bills:
+                {props.billState.passedBills.map( (e) => (
+                    <div key={e.bill_id}> 
+                        <li>
+                            {e.title}
+                            <Link to={`/bills/${e.bill_id}`}> Details </Link>
+                        </li>
+                    </div>
+                ))}
+            </div> : null}
+
         </div>
     )
 }
