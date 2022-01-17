@@ -18,15 +18,11 @@ const Details = (props) => {
 
     const { id } = useParams()
     const congress = id.substring(0, id.indexOf('-'))
-    // const bill = props.billState
-    console.log(props.billState)
 
     useEffect(() => {
         props.fetchDetails(congress)
     }, [congress])
 
-
-    console.log(props.match)
 
     return (
         <div>
