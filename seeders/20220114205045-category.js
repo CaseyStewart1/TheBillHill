@@ -59,7 +59,14 @@ const category = [
     description: 'Bills pertaining to state of the nations economy and wealth',
     createdAt: new Date(),
     updatedAt: new Date()
-  }
+  },
+  {
+    primarysubject: 'Public Lands and Natural Resources',
+    description: 'Bills pertaining to public and private lands and resources',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+
 ];
 
 module.exports = {
