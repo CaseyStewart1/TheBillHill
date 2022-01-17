@@ -4,12 +4,29 @@ import { Link } from 'react-router-dom'
 const SignIn = (props) => {
     return (
         <div>
-            sign in here
-
-            user:
-            password: 
-
-            dont have an account? SignUp <Link to='/sign-up'>here</Link>
+            <div>
+                sign in here
+            </div>
+            <div>
+                <form>
+                    <div>
+                        <input
+                        type='text'
+                        placeholder='Username'
+                        
+                        />
+                    </div>
+                    <div>
+                        <input 
+                        type='text'
+                        placeholder='Password'
+                        />
+                    </div>
+                </form>
+            </div>
+            <div>
+                dont have an account? SignUp <Link to='/sign-up'>here</Link>
+            </div>
         </div>
     )
 }
