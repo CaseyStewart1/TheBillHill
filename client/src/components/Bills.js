@@ -30,8 +30,6 @@ const Bill = (props) => {
         props.fetchPassedBills()
     }, [])
 
-    // console.log(render)
-
     return (
         <div>
             {render === 0 ? 
@@ -56,7 +54,7 @@ const Bill = (props) => {
                             <Link to={`/bills/${e.bill_id}`}> Details </Link>
                         </li>
                     </div>
-            ))}
+                ))}
             </div> : null}
 
             {render === 1 ? <div>
