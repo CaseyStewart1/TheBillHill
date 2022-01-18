@@ -11,15 +11,31 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Bill.belongsTo(models.User, { foreignKey: 'userId' })
-      Bill.belongsTo(models.Category, { foreignKey: 'categoryId' })
+      Bill.belongsTo(models.User, {
+        foreignKey: 'userId',
+      })
+
+      Bill.belongsTo(models.Category, {
+        foreignKey: 'categoryId'
+      })
+
     }
   };
   Bill.init({
-    bill: DataTypes.STRING,
     title: DataTypes.STRING,
-    subject: DataTypes.STRING,
+    billNumber: DataTypes.STRING,
     url: DataTypes.STRING,
+    sponsorName: DataTypes.STRING,
+    sponsorId: DataTypes.STRING,
+    sponsorParty: DataTypes.STRING,
+    introduced: DataTypes.STRING,
+    active: DataTypes.BOOLEAN,
+    committees: DataTypes.STRING,
+    primmarySubject: DataTypes.STRING,
+    summary: DataTypes.STRING,
+    summaryShort: DataTypes.STRING,
+    latestActionDate: DataTypes.STRING,
+    latestAction: DataTypes.STRING,
     userId: {
       type: DataTypes.INTEGER,
       onDelete: 'CASCADE',
@@ -37,11 +53,12 @@ module.exports = (sequelize, DataTypes) => {
         model: 'categories',
         key: 'id'
       }
-    }
-  }, {
-    sequelize,
-    modelName: 'Bill',
-    tableName: 'bills'
-  });
+    },
+  },
+    {
+      sequelize,
+      modelName: 'Bill',
+      tableName: 'bills'
+    });
   return Bill;
 };
