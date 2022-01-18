@@ -33,10 +33,11 @@ const SignUp = (props) => {
                         placeholder='Confirm Password'
                         />
                     </div>
+                    <button> Submit </button>
                 </form>
             </div>
             <div>
-                already have an account? SignIn <Link to='/sign-in'>here</Link>
+                already have an account? SignIn <Link to='/'>here</Link>
             </div>
         </div>
     )
