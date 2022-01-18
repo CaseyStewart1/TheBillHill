@@ -1,5 +1,5 @@
 
-const { User, Bill, Category } = require('../models')
+const { Category } = require('../models')
 const { Op, literal, fn, col, EmptyResultError } = require('sequelize')
 
 

@@ -1,5 +1,4 @@
 
-const { Bill, User } = require('../models')
 const { User, Bill, Category } = require('../models')
 const { Op, literal, fn, col, EmptyResultError } = require('sequelize')
 
@@ -14,7 +13,7 @@ const GetAllBills = async (req, res) => {
 
             ],
         })
-        res.send(popular)
+        res.send(all)
     } catch (error) {
         throw error
     }
