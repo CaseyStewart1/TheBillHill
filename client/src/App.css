@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: #FEFEFB;
+}
+a:link {
+    text-decoration: none;
+    color: black;
+}
+button {
+    margin: 10px;
+    padding: 2px 5px;
+    text-decoration: none;
+    border: none;
+    background-color: #e7e7e7;
+    border-radius: 3px;
+}
+button:hover {
+    background-color: #CECECE;
+}
+input {
+    width: 20%;
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: #e7e7e7;
+    border: 1px solid #ccc;
+    padding: 5px 8px;
+    margin: 1px;
+}
+.span-details {
+ border: solid #ccc 1px;
+}
