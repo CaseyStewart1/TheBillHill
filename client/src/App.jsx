@@ -8,21 +8,42 @@ import Details from './components/Details';
 import Profile from './components/Profile';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
+import { LogIn } from './store/actions/UserAction';
+import { connect } from 'react-redux';
 
-const log = 0
+
+const mapStateToProps = (state) => {
+  return {
+    userState: state.userState
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    logIn: () => dispatch(LogIn())
+  }
+}
+
+function App(props) {
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    props.logIn()
+}
 
 
-function App() {
   return (
 
     <div>
-      {log === 1 ?       
+      {props.userState.isLoggedin === true ?       
       <div>
-        <NavBar/>
+        <div className='navbar'>
+          <NavBar />
+        </div>
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path='/bills/:id' component={Details}/>
-          <Route exact path='/bills' component={Bill}/>
+          <Route path='/bills' component={Bill}/>
           <Route path='/profile' component={Profile}/>
         </Switch>
       </div> 
@@ -31,14 +52,21 @@ function App() {
       
       <div>
         <Switch>
-          <Route path='/sign-up' component={SignUp}/>
-          <Route path='/sign-in' component={SignIn}/>
+          <Route exact path='/' >
+            <SignIn 
+              handleSubmit={handleSubmit}
+            />
+          </Route>
+          <Route path='/sign-up'>
+            <SignUp/>          
+          </Route>
         </Switch>
-
       </div>}
-
+      <div className='footer'>
+        <h6>DISCLAIMER: THIS IS NOT A GOVERMENT SITE</h6>
+      </div>
     </div>
   );
 }
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App)

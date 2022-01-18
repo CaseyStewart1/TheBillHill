@@ -1,7 +1,33 @@
 import React from 'react'
+// import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+// import { LogIn } from '../store/actions/UserAction'
+
+
+
+// const mapStateToProps = (state) => {
+//     // console.log(state)
+//     return {
+//       userState: state.userState
+//     }
+//   }
+  
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//       logIn: () => dispatch(LogIn())
+//     }
+//   }
+
+
 
 const SignIn = (props) => {
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     props.logIn()
+    // }
+    
+
     return (
         <div>
             <div>
@@ -22,6 +48,7 @@ const SignIn = (props) => {
                         placeholder='Password'
                         />
                     </div>
+                    <button onClick={props.handleSubmit}> Submit </button>
                 </form>
             </div>
             <div>
@@ -31,4 +58,5 @@ const SignIn = (props) => {
     )
 }
 
+// export default connect(mapStateToProps, mapDispatchToProps)(SignIn)
 export default SignIn
