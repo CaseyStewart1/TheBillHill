@@ -29,7 +29,7 @@ const Details = (props) => {
             { props.billState.isLoading ? <p> loading </p> : <div> {props.billState.bill.map( (e) => (
                 <div key={e.bill_id}> 
                     {e.title}
-                    <a href={`${e.govtrack_url}`} target={`_blank`} rel="noreferred"> more details </a>
+                    <a href={`${e.govtrack_url}`} target={`_blank`} rel="noreferred"> <span className="span-details">more details</span> </a>
                 </div>
             ))} </div>}
         </div>
