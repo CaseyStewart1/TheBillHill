@@ -37,15 +37,17 @@ function App(props) {
     <div>
       {props.userState.isLoggedin === true ?       
       <div>
-        <div className='navbar'>
+        <div className='nav-bar'>
           <NavBar />
         </div>
-        <Switch>
-          <Route exact path='/' component={Home}/>
-          <Route path='/bills/:id' component={Details}/>
-          <Route path='/bills' component={Bill}/>
-          <Route path='/profile' component={Profile}/>
-        </Switch>
+        <div className='app-body'>
+          <Switch>
+            <Route exact path='/' component={Home}/>
+            <Route path='/bills/:id' component={Details}/>
+            <Route path='/bills' component={Bill}/>
+            <Route path='/profile' component={Profile}/>
+          </Switch>
+        </div>
       </div> 
       
       : 

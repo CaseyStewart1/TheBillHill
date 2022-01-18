@@ -28,7 +28,7 @@ const Home = (props) => {
             {props.statementState.statements.map( (e,e2) => (
                 <div key={e2}>
                     {e.title}
-                    <a href={`${e.url}`} target={`_blank`} rel="noreferred"> more details </a>
+                    <a href={`${e.url}`} target={`_blank`} rel="noreferred"> <span className="span-details">more details</span> </a>
                 </div>
             ))}
         </div>
