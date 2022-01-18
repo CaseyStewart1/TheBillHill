@@ -1,10 +1,10 @@
 
-const { User, Bill, Category } = require('../models')
-const { Op, literal, fn, col, EmptyResultError } = require('sequelize')
+const { Bill } = require('../models')
+
 
 const GetAllBills = async (req, res) => {
     try {
-        const all = await bills.findAll({
+        const all = await Bill.findAll({
             attributes: [
                 'id',
                 'title',
@@ -21,7 +21,7 @@ const GetAllBills = async (req, res) => {
 
 const GetBillsById = async (req, res) => {
     try {
-        const billsById = await bills.findAll({ order: [['created_at', 'DESC']] })
+        const billsById = await Bill.findAll({ order: [['created_at', 'DESC']] })
         res.send(billsById)
     } catch (error) {
         throw error
@@ -39,4 +39,3 @@ module.exports = {
 
 }
 
-module.exports = {}

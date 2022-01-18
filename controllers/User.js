@@ -1,9 +1,9 @@
 const { User } = require('../models')
-const { Op, literal, fn, col, EmptyResultError } = require('sequelize')
+
 
 const GetAllUsers = async (req, res) => {
     try {
-        const all = await users.findAll({
+        const all = await User.findAll({
             attributes: [
                 'username',
                 'name',
@@ -33,7 +33,7 @@ const GetUserDetails = async (req, res) => {
         userId,
         ...req.body
       }
-      let user = await users.create(userBody)
+      let user = await User.create(userBody)
       res.send(user)
     } catch (error) {
       throw error
@@ -43,7 +43,7 @@ const GetUserDetails = async (req, res) => {
   const UpdateUser = async (req, res) => {
     try {
       let userId = parseInt(req.params.user_id)
-      let updatedUser = await users.update(req.body,{
+      let updatedUser = await User.update(req.body,{
         where: {id: userId},
         returning: true
       })
@@ -56,7 +56,7 @@ const GetUserDetails = async (req, res) => {
   const DeleteUser = async (req, res) => {
     try {
       let userId = parseInt(req.params.user_id)
-      await user.destroy({where: {id: userId}})
+      await User.destroy({where: {id: userId}})
       res.send({message:`Deleted user with an id of ${userId} `})
     } catch (error) {
       throw error
@@ -75,4 +75,3 @@ module.exports = {
 
 }
 
-module.exports = {}
