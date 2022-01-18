@@ -37,7 +37,9 @@ function App(props) {
     <div>
       {props.userState.isLoggedin === true ?       
       <div>
-        <NavBar/>
+        <div className='navbar'>
+          <NavBar />
+        </div>
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path='/bills/:id' component={Details}/>
@@ -60,7 +62,9 @@ function App(props) {
           </Route>
         </Switch>
       </div>}
-    <h1>DISCLAIMER: THIS IS NOT A GOVERMENT SITE</h1>
+      <div className='footer'>
+        <h6>DISCLAIMER: THIS IS NOT A GOVERMENT SITE</h6>
+      </div>
     </div>
   );
 }

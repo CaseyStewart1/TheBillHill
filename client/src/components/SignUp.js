@@ -1,7 +1,21 @@
 import React from "react";
 import { Link } from 'react-router-dom'
+// import { connect } from "react-redux";
+import { useHistory } from "react-router-dom";
+
+
+
 
 const SignUp = (props) => {
+
+    const history = useHistory()
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        history.push('/')
+    }
+
+
     return (
         <div>
             <div>
@@ -33,7 +47,7 @@ const SignUp = (props) => {
                         placeholder='Confirm Password'
                         />
                     </div>
-                    <button> Submit </button>
+                    <button onClick={handleSubmit}> Submit </button>
                 </form>
             </div>
             <div>
@@ -43,4 +57,4 @@ const SignUp = (props) => {
     )
 }
 
-export default SignUp 
+export default SignUp
