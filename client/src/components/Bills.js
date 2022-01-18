@@ -46,6 +46,7 @@ const Bill = (props) => {
       ) : null}
       {render === 2 ? (
         <div>
+
           <button onClick={() => updateRender(1)}>Active</button>{' '}
           <button onClick={() => updateRender(0)}>Introduced</button>
         </div>
@@ -78,6 +79,7 @@ const Bill = (props) => {
           ))}
         </div>
       ) : null}
+
 
       {render === 2 ? (
         <div>

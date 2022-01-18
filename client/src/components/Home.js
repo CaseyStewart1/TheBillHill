@@ -15,6 +15,7 @@ const mapStateToProps = (state) => {
 };
 
 const Home = (props) => {
+
   useEffect(() => {
     props.fetchStatements();
   }, []);
@@ -39,3 +40,4 @@ const Home = (props) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
+
