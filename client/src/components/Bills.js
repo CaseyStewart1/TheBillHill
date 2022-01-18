@@ -51,7 +51,7 @@ const Bill = (props) => {
                     <div key={e.bill_id}> 
                         <li>
                             {e.title}
-                            <Link to={`/bills/${e.bill_id}`}> Details </Link>
+                            <Link to={`/bills/${e.bill_id}`}> <span className="span-details">more details</span> </Link>
                         </li>
                     </div>
                 ))}
@@ -63,7 +63,7 @@ const Bill = (props) => {
                     <div key={e.bill_id}> 
                         <li>
                             {e.title}
-                            <Link to={`/bills/${e.bill_id}`}> Details </Link>
+                            <Link to={`/bills/${e.bill_id}`}> <span className="span-details">more details</span> </Link>
                         </li>
                     </div>
                 ))}
@@ -75,7 +75,7 @@ const Bill = (props) => {
                     <div key={e.bill_id}> 
                         <li>
                             {e.title}
-                            <Link to={`/bills/${e.bill_id}`}> Details </Link>
+                            <Link to={`/bills/${e.bill_id}`}> <span className="span-details">more details</span> </Link>
                         </li>
                     </div>
                 ))}
