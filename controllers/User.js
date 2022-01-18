@@ -3,14 +3,7 @@ const { User } = require('../models')
 
 const GetAllUsers = async (req, res) => {
     try {
-        const all = await User.findAll({
-            attributes: [
-                'username',
-                'name',
-                'email',
-                'state'
-            ],
-        })
+        const all = await User.findAll()
         res.send(all)
     } catch (error) {
         throw error
