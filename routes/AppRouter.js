@@ -6,3 +6,5 @@ const BillRouter = require('./BillRouter');
 Router.use('/categories', CategoryRouter);
 Router.use('/users', UserRouter);
 Router.use('/bills', BillRouter);
+
+module.exports = Router
