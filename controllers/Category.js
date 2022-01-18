@@ -49,9 +49,9 @@ const UpdateCategories = async (req, res) => {
 
 
 module.exports = {
-    GetAllCategories
-    // GetCategoriesById,
-    // UpdateCategories
+    GetAllCategories,
+    GetCategoriesById,
+    UpdateCategories
 
 
 }

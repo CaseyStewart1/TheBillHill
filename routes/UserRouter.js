@@ -3,7 +3,6 @@ const Router = require('express').Router();
 
 Router.get('/')
 
-
 // Router.get('/view/:user_id', controller.GetAllUsers)
 // Router.get('/view/:user_id', controller.GetUserDetails)
 // Router.post('/:user_id', controller.CreateUser)
