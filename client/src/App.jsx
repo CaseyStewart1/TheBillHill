@@ -34,13 +34,10 @@ function App(props) {
 
   return (
 
-    <div className='appPage'>
+    <div>
       {props.userState.isLoggedin === true ?       
       <div>
-
-        <div className='header'>
-          <img src='https://cdn.vox-cdn.com/thumbor/gE3ABsBgUGSQPgeJJd9XEc7yUIY=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19780477/washington.jpg' alt="header photo" width="33%" />
-
+        <div className='nav-bar'>
           <NavBar />
         </div>
         <div className='app-body'>
