@@ -1,5 +1,7 @@
-const Router = require('express').Router()
+const Router = require('express').Router();
 
-const controller = require('../controllers/BillController')
+const controller = require('../controllers/BillController');
 
-Router.get('/', controller.GetAllBills)
+Router.get('/', controller.GetAllBills);
+
+module.exports = Router;
