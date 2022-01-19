@@ -11,7 +11,7 @@ const GetAllUsers = async (req, res) => {
 
 const GetUserById = async (req, res) => {
   try {
-    const response = await User.findById();
+    const response = await User.findByPk(req.params.id); 
     res.send(response);
   } catch (error) {
     throw error;
@@ -29,7 +29,7 @@ const CreateUser = async (req, res) => {
 
 const UpdateUser = async (req, res) => {
   try {
-    let userId = parseInt(req.params.user_id);
+    let userId = parseInt(req.params.id);
     let updatedUser = await User.update(req.body, {
       where: { id: userId },
       returning: true
@@ -42,7 +42,7 @@ const UpdateUser = async (req, res) => {
 
 const DeleteUser = async (req, res) => {
   try {
-    let userId = parseInt(req.params.user_id);
+    let userId = parseInt(req.params.id);
     await User.destroy({ where: { id: userId } });
     res.send({ message: `Deleted user with an id of ${userId} ` });
   } catch (error) {
