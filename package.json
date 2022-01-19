@@ -20,10 +20,17 @@
   },
   "homepage": "https://github.com/CaseyStewart1/TheBillHill#readme",
   "dependencies": {
+    "axios": "^0.25.0",
     "body-parser": "^1.19.1",
     "cors": "^2.8.5",
     "express": "^4.17.2",
+    "history": "^5.2.0",
     "pg": "^8.7.1",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^5.3.0",
+    "redux": "^4.1.2",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.1",
     "sequelize": "^6.13.0"
   },
   "devDependencies": {
