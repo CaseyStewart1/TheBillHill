@@ -8,8 +8,9 @@ import Details from './components/Details';
 import Profile from './components/Profile';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
-import { LogIn } from './store/actions/UserAction';
+import { LogIn, LoadUser } from './store/actions/UserAction';
 import { connect } from 'react-redux';
+import { useParams } from 'react-router-dom';
 
 
 const mapStateToProps = (state) => {
@@ -20,7 +21,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    logIn: () => dispatch(LogIn())
+    logIn: () => dispatch(LogIn()),
+    getUser: () => dispatch(LoadUser())
   }
 }
 
@@ -28,7 +30,8 @@ function App(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    props.logIn()
+    // props.logIn()
+    props.getUser()
 }
 
 
