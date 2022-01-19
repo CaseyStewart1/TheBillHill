@@ -1,4 +1,5 @@
 import axios from 'axios'
+import Client from '.'
 
 // const key = process.env.REACT_APP_API_KEY
 // console.log(key)
@@ -64,6 +65,15 @@ export const GetStatements = async () => {
         })
         // console.log(response)
         return response.data.results
+    } catch (error) {
+        throw error
+    }
+}
+
+export const GetUserById = async () => {
+    try {
+        const response = await Client.get(`/users/`)
+        return response.data
     } catch (error) {
         throw error
     }
