@@ -78,3 +78,12 @@ export const GetUserById = async () => {
         throw error
     }
 }
+
+export const PostUser = async () => {
+    try {
+        const response = await Client.post(`/users/`)
+        return response.data
+    } catch (error) {
+        throw error
+    }
+}
