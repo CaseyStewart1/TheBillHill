@@ -1,8 +1,8 @@
-const { User } = require('../models');
+const { User, Bill } = require('../models');
 
 const GetAllUsers = async (req, res) => {
   try {
-    const response = await User.findAll();
+    const response = await User.findAll({include: Bill});
     res.send(response);
   } catch (error) {
     throw error;

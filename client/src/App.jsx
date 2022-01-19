@@ -30,7 +30,7 @@ function App(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // props.logIn()
+    props.logIn()
     props.getUser()
 }
 

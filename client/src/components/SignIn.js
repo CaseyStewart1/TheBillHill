@@ -38,14 +38,14 @@ const SignIn = (props) => {
                     <div>
                         <input
                         type='text'
-                        placeholder='Username'
+                        placeholder='Email'
                         
                         />
                     </div>
                     <div>
                         <input 
                         type='text'
-                        placeholder='Password'
+                        placeholder='Username'
                         />
                     </div>
                     <button onClick={props.handleSubmit}> Submit </button>

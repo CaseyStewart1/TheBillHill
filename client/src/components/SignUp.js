@@ -35,7 +35,7 @@ const SignUp = (props) => {
                         placeholder='Email'
                         />
                     </div>
-                    <div>
+                    {/* <div>
                         <input 
                         type='text'
                         placeholder='Password'
@@ -46,7 +46,7 @@ const SignUp = (props) => {
                         type='text'
                         placeholder='Confirm Password'
                         />
-                    </div>
+                    </div> */}
                     <button onClick={handleSubmit}> Submit </button>
                 </form>
             </div>
