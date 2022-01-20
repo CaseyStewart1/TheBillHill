@@ -3,7 +3,6 @@ import Client from '.'
 // require('dotenv').config()
 
 const key = process.env.REACT_APP_API_KEY
-console.log(key)
 export const GetBills = async () => {
     try {
         const response = await axios.get(`https://api.propublica.org/congress/v1/117/both/bills/introduced.json`, {
