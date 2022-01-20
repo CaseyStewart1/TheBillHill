@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 // import { connect } from "react-redux";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 
 
 
 const SignUp = (props) => {
 
-    const history = useHistory()
+    // const history = useHistory()
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        history.push('/')
-    }
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     history.push('/')
+    // }
 
 
     return (
@@ -26,13 +26,19 @@ const SignUp = (props) => {
                     <div>
                         <input
                         type='text'
+                        name="name"
+                        value={props.userName}
                         placeholder='Username'
+                        onChange={props.handleChange}
                         />
                     </div>
                     <div>
                         <input 
                         type='text'
+                        name="email"
+                        value={props.email}
                         placeholder='Email'
+                        onChange={props.handleChange}
                         />
                     </div>
                     {/* <div>
@@ -47,7 +53,7 @@ const SignUp = (props) => {
                         placeholder='Confirm Password'
                         />
                     </div> */}
-                    <button onClick={handleSubmit}> Submit </button>
+                    <button onClick={props.handleSignUp}> Submit </button>
                 </form>
             </div>
             <div>

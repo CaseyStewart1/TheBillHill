@@ -20,7 +20,8 @@ const GetUserById = async (req, res) => {
 
 const CreateUser = async (req, res) => {
   try {
-    const response = await User.create(req.body);
+    const response = await User.create({...req.body});
+    console.log(`created ${response}`)
     res.send(response);
   } catch (error) {
     throw error;
