@@ -1,13 +1,14 @@
 import axios from 'axios'
 import Client from '.'
+// require('dotenv').config()
 
-// const key = process.env.REACT_APP_API_KEY
-// console.log(key)
+const key = process.env.REACT_APP_API_KEY
+console.log(key)
 export const GetBills = async () => {
     try {
         const response = await axios.get(`https://api.propublica.org/congress/v1/117/both/bills/introduced.json`, {
             headers: {
-                'X-API-Key': `Q2vP0osGpYnRKlCzFe7stoMYp8n88Yv5bwP1ZUwU`
+                'X-API-Key': `${key}`
             }
         })
         return response.data.results[0].bills
@@ -20,7 +21,7 @@ export const GetActiveBills = async () => {
     try {
         const response = await axios.get(`https://api.propublica.org/congress/v1/117/both/bills/active.json`, {
             headers: {
-                'X-API-Key': `Q2vP0osGpYnRKlCzFe7stoMYp8n88Yv5bwP1ZUwU`
+                'X-API-Key': `${key}`
             }
         })
         return response.data.results[0].bills
@@ -33,7 +34,7 @@ export const GetPassedBills = async () => {
     try {
         const response = await axios.get(`https://api.propublica.org/congress/v1/117/both/bills/passed.json`, {
             headers: {
-                'X-API-Key': `Q2vP0osGpYnRKlCzFe7stoMYp8n88Yv5bwP1ZUwU`
+                'X-API-Key': `${key}`
             }
         })
         return response.data.results[0].bills
@@ -46,7 +47,7 @@ export const GetBillById = async (billId) => {
     try {
         const response = await axios.get(`https://api.propublica.org/congress/v1/117/bills/${billId}.json`, {
             headers: {
-                'X-API-Key': `Q2vP0osGpYnRKlCzFe7stoMYp8n88Yv5bwP1ZUwU`
+                'X-API-Key': `${key}`
             }
         })
         // console.log(billId)
@@ -60,7 +61,7 @@ export const GetStatements = async () => {
     try {
         const response = await axios.get(`https://api.propublica.org/congress/v1/statements/latest.json`, {
             headers: {
-                'X-API-Key': `Q2vP0osGpYnRKlCzFe7stoMYp8n88Yv5bwP1ZUwU`
+                'X-API-Key': `${key}`
             }
         })
         // console.log(response)
