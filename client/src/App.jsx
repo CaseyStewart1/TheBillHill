@@ -38,7 +38,7 @@ function App(props) {
 
   const handleLogIn = (e) => {
     e.preventDefault()
-    // props.logIn()
+    props.logIn()
     props.getUser()
   }
 
