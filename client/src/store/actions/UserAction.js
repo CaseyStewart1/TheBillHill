@@ -20,10 +20,15 @@ export const LoadUser = () => {
     }
 }
 
-export const LoadNewUser = () => {
+export const updateNewUser = (newUser) => ({
+    type: NEW_USER,
+    payload: newUser
+})
+
+export const SendNewUser = (form) => {
     return async (dispatch) => {
         try {
-            const newUser = await PostUser()
+            const newUser = await PostUser(form)
             dispatch({
                 type: NEW_USER,
                 payload: newUser

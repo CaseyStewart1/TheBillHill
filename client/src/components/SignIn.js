@@ -48,7 +48,7 @@ const SignIn = (props) => {
                         placeholder='Username'
                         />
                     </div>
-                    <button onClick={props.handleSubmit}> Submit </button>
+                    <button onClick={props.handleLogIn}> Submit </button>
                 </form>
             </div>
             <div>
