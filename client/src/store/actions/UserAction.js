@@ -33,6 +33,8 @@ export const SendNewUser = (form) => {
                 type: NEW_USER,
                 payload: newUser
             })
+            console.log(form)
+            console.log(newUser)
         } catch (error) {
             throw error
         }
