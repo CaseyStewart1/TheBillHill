@@ -1,8 +1,8 @@
-const { IS_LOGGEDIN, GET_USER, NEW_USER } = require('../types')
+const { IS_LOGGEDIN, GET_USER, NEW_USER, DELETE_USER } = require('../types')
 
 const initialState = { 
     isLoggedin: false,
-    user: [],
+    user: {},
     newUser: {
         "name": "",
         "email": "",
@@ -16,6 +16,8 @@ const UserReducer = (state = initialState, action) => {
         case NEW_USER:
             return { ...state, newUser: {...state.newUser, ...action.payload}}
         case GET_USER:
+            return { ...state, user: action.payload }
+        case DELETE_USER:
             return { ...state, user: action.payload }
         default:
             return { ...state }

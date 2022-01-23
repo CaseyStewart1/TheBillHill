@@ -9,6 +9,15 @@ const GetAllUsers = async (req, res) => {
   }
 };
 
+const GetUser = async (req, res) => {
+  try {
+    const response = await User.findOne({where: {  ...req.body }})
+    res.send(response)
+  } catch (error) {
+    throw error
+  }
+}
+
 const GetUserById = async (req, res) => {
   try {
     const response = await User.findByPk(req.params.id); 
@@ -56,5 +65,6 @@ module.exports = {
   GetUserById,
   UpdateUser,
   DeleteUser,
-  CreateUser
+  CreateUser,
+  GetUser
 };

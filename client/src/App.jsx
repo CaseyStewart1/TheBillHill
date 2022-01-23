@@ -47,7 +47,6 @@ function App(props) {
     history.push('/')
     console.log(props.userState.newUser)
     props.takeNewUser(props.userState.newUser)
-    // props.takeNewUser(JSON.stringify({[e.target.name]: e.target.value}))
   }
 
 

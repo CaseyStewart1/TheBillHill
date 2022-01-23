@@ -8,13 +8,6 @@ import { Link } from 'react-router-dom'
 
 const SignUp = (props) => {
 
-    // const history = useHistory()
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault()
-    //     history.push('/')
-    // }
-
 
     return (
         <div>
@@ -41,18 +34,6 @@ const SignUp = (props) => {
                         onChange={props.handleChange}
                         />
                     </div>
-                    {/* <div>
-                        <input 
-                        type='text'
-                        placeholder='Password'
-                        />
-                    </div>
-                    <div>
-                        <input 
-                        type='text'
-                        placeholder='Confirm Password'
-                        />
-                    </div> */}
                     <button onClick={props.handleSignUp}> Submit </button>
                 </form>
             </div>

@@ -1,15 +1,20 @@
-import { GetUserById, PostUser } from '../../services/BillServices'
-import { GET_USER, IS_LOGGEDIN, NEW_USER } from '../types'
+import { GetUser, PostUser, DeleteUser } from '../../services/BillServices'
+import { GET_USER, IS_LOGGEDIN, NEW_USER, DELETE_USER } from '../types'
 
 export const LogIn = () => ({
     type: IS_LOGGEDIN,
     payload: true
 })
 
+export const LogOut = () => ({
+    type: IS_LOGGEDIN,
+    payload: false
+})
+
 export const LoadUser = () => {
     return async (dispatch) => {
         try {
-            const user = await GetUserById()
+            const user = await GetUser()
             dispatch({
                 type: GET_USER,
                 payload: user
@@ -35,6 +40,20 @@ export const SendNewUser = (form) => {
             })
             console.log(form)
             console.log(newUser)
+        } catch (error) {
+            throw error
+        }
+    }
+}
+
+export const UserToDelete = (id) => {
+    return async (dispatch) => {
+        try {
+            const deleteUser = await DeleteUser(id)
+            dispatch({
+                type: DELETE_USER,
+                payload: deleteUser
+            })
         } catch (error) {
             throw error
         }
