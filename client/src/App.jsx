@@ -45,7 +45,7 @@ function App(props) {
   const handleSignUp = (e) => {
     e.preventDefault()
     history.push('/')
-    console.log(props.userState.newUser)
+    // console.log(props.userState.newUser)
     props.takeNewUser(props.userState.newUser)
   }
 

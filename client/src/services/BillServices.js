@@ -113,3 +113,12 @@ export const DeleteUser = async (id) => {
     throw error
   }
 }
+
+export const UpdateUser = async (id, form) => {
+  try {
+    const response = await Client.put(`users/${id}`, form)
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}
