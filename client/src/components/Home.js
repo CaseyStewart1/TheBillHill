@@ -25,7 +25,7 @@ const Home = (props) => {
 
     return (
         <div>
-            <h4>Press Releases</h4>
+            <h4>Most Recent Congressional Statements</h4>
             {props.statementState.statements.map( (e,e2) => (
                 <div key={e2} className="statements">
                     {e.title}

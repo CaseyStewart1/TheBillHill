@@ -102,7 +102,8 @@ h4 {
 }
 
 #sign-here {
-    color: #FF6961;
+    color: #D35650;
+    background-color: #89A5C3;
 }
 
 .prof-e {
@@ -124,4 +125,22 @@ input {
 
 .email-edit {
     background-color: #FEFEFB;
+}
+
+#sign-page {
+    background-color: #89A5C3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150%;
+}
+
+#sign-page-s {
+    background-color: #89A5C3;
+    
+}
+
+#sign-input {
+    width: 75%;
 }

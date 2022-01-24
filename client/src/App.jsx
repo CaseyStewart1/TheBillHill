@@ -69,7 +69,7 @@ function App(props) {
       
       : 
       
-      <div>
+      <div id="sign-page">
         <Switch>
           <Route exact path='/' >
             <SignIn 
@@ -82,6 +82,7 @@ function App(props) {
               userName={props.userState.newUser.name}
               handleChange={handleChange}
               handleSignUp={handleSignUp}
+              
             />          
           </Route>
         </Switch>

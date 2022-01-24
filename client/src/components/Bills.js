@@ -34,15 +34,15 @@ const Bill = (props) => {
         <div className="bill-body">
             {render === 0 ? 
                 <div>
-                    <button onClick={() => updateRender(1)}>Active</button> <button onClick={() => updateRender(2)}>Passed</button> 
+                    <button onClick={() => updateRender(1)}>Active Bills</button> <button onClick={() => updateRender(2)}>Passed Bils</button> 
                 </div> : null}
             {render === 1 ? 
                 <div>
-                    <button onClick={() => updateRender(0)}>Introduced</button> <button onClick={() => updateRender(2)}>Passed</button> 
+                    <button onClick={() => updateRender(0)}>Introduced Bills</button> <button onClick={() => updateRender(2)}>Passed Bills</button> 
                 </div> : null}
             {render === 2 ? 
                 <div>
-                    <button onClick={() => updateRender(1)}>Active</button> <button onClick={() => updateRender(0)}>Introduced</button> 
+                    <button onClick={() => updateRender(1)}>Active Bills</button> <button onClick={() => updateRender(0)}>Introduced Bills</button> 
                 </div> : null}
                 
             {render === 0 ? <div>
