@@ -36,7 +36,8 @@ const Profile = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         props.updateUser(props.userState.user.id, props.userState.user)
-        history.push('/')
+        // history.push('/')
+        updateEdit(0)
     }
 
     const handleDelete = () => {
