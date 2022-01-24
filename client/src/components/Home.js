@@ -25,8 +25,9 @@ const Home = (props) => {
 
     return (
         <div>
+            <h4>Press Releases</h4>
             {props.statementState.statements.map( (e,e2) => (
-                <div key={e2}>
+                <div key={e2} className="statements">
                     {e.title}
                     <a href={`${e.url}`} target={`_blank`} rel="noreferred"> <span className="span-details">more details</span> </a>
                 </div>

@@ -3,10 +3,19 @@
     margin: 0;
     background-color: #FEFEFB;
 }
+
 a:link {
     text-decoration: none;
     color: black;
+    background-color: #FDFDF7;
 }
+
+a:visited {
+    text-decoration: none;
+    color: black;
+    background-color: #FDFDF7;
+}
+
 button {
     margin: 10px;
     padding: 2px 5px;
@@ -15,9 +24,11 @@ button {
     background-color: #e7e7e7;
     border-radius: 3px;
 }
+
 button:hover {
     background-color: #CECECE;
 }
+
 input {
     width: 20%;
     text-decoration: none;
@@ -27,6 +38,90 @@ input {
     padding: 5px 8px;
     margin: 1px;
 }
+
 .span-details {
  border: solid #ccc 1px;
+}
+
+.nav-bar{
+    display: flex;
+    border-bottom: solid black 1px;
+    color: #FDFDF7;
+    background-color: #2C3D55;
+    justify-content: space-around;
+}
+
+.footer {
+    justify-content: flex-end;
+}
+
+h6{
+    background-color: #2C3D55;
+    color: #FDFDF7;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+#nav-e{
+    color: #FDFDF7;
+    background-color: #2C3D55;
+}
+
+.app-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 110%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.statements {
+    border: solid #E85F58 1px;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+h4 {
+    padding: 2%;
+}
+
+.bill-doy {
+    padding-top: 8%;
+}
+
+.bills {
+    border: solid #E85F58 1px;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+#sign-here {
+    color: #FF6961;
+}
+
+.prof-e {
+    padding: 5px;
+}
+
+input {
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
+.name-edit {
+    background-color: #D27776;
+}
+
+.location-edit {
+    background-color: #D27776;
+}
+
+.email-edit {
+    background-color: #FEFEFB;
 }

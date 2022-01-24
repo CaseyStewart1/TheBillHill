@@ -31,7 +31,7 @@ const Bill = (props) => {
     }, [])
 
     return (
-        <div>
+        <div className="bill-body">
             {render === 0 ? 
                 <div>
                     <button onClick={() => updateRender(1)}>Active</button> <button onClick={() => updateRender(2)}>Passed</button> 
@@ -46,9 +46,9 @@ const Bill = (props) => {
                 </div> : null}
                 
             {render === 0 ? <div>
-                Introduced bills:
+                <h4>Introduced bills:</h4>
                 {props.billState.bills.map( (e) => (
-                    <div key={e.bill_id}> 
+                    <div key={e.bill_id} className="bills"> 
                         <li>
                             {e.title}
                             <Link to={`/bills/${e.bill_id}`}> <span className="span-details">more details</span> </Link>
@@ -58,9 +58,9 @@ const Bill = (props) => {
             </div> : null}
 
             {render === 1 ? <div>
-                Active bills:
+                <h4>Active bills:</h4>
                 {props.billState.activeBills.map( (e) => (
-                    <div key={e.bill_id}> 
+                    <div key={e.bill_id} className="bills"> 
                         <li>
                             {e.title}
                             <Link to={`/bills/${e.bill_id}`}> <span className="span-details">more details</span> </Link>
@@ -70,9 +70,9 @@ const Bill = (props) => {
             </div> : null}
 
             {render === 2 ? <div>
-                Passed bills:
+                <h4>Passed bills:</h4>
                 {props.billState.passedBills.map( (e) => (
-                    <div key={e.bill_id}> 
+                    <div key={e.bill_id} className="bills"> 
                         <li>
                             {e.title}
                             <Link to={`/bills/${e.bill_id}`}> <span className="span-details">more details</span> </Link>

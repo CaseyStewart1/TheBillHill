@@ -2,14 +2,9 @@ const { IS_LOGGEDIN, GET_USER, NEW_USER, DELETE_USER, UPDATE_USER } = require('.
 
 const initialState = { 
     isLoggedin: false,
-    user: {
-        name: '',
-        email: '',
-        location: ''
-    },
+    user: {},
     newUser: {
-        "name": "",
-        "email": "",
+
     }
 }
 

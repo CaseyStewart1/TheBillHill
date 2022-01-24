@@ -1,10 +1,7 @@
 import axios from 'axios';
 import Client from '.';
-// require('dotenv').config()
 
 const key = process.env.REACT_APP_API_KEY;
-// console.log(process.env.REACT_APP_API_KEY);
-// console.log(key);
 export const GetBills = async () => {
   try {
     const response = await axios.get(
@@ -63,7 +60,6 @@ export const GetBillById = async (billId) => {
         }
       }
     );
-    // console.log(billId)
     return response.data.results;
   } catch (error) {
     throw error;
@@ -80,7 +76,6 @@ export const GetStatements = async () => {
         }
       }
     );
-    // console.log(response)
     return response.data.results;
   } catch (error) {
     throw error;

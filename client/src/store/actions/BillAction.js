@@ -9,7 +9,6 @@ export const LoadBills = () => {
                 type: GET_BILLS,
                 payload: bills
             })
-            // console.log(bills)
         } catch (error) {
             throw error
         }
@@ -56,8 +55,6 @@ export const LoadBillById = (congress) => {
                 type: IS_LOADING,
                 payload: false,
             })
-
-            // console.log(bill)
         } catch (error) {
             throw error
         }
@@ -72,7 +69,6 @@ export const LoadStatements = () => {
                 type: GET_STATEMENTS,
                 payload: statements
             })
-            // console.log(statements)
         } catch (error) {
             throw error
         }

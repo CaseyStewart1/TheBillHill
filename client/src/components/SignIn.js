@@ -1,7 +1,5 @@
 import React from 'react'
-// import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-// import { LogIn } from '../store/actions/UserAction'
 
 
 
@@ -33,7 +31,7 @@ const SignIn = (props) => {
                 </form>
             </div>
             <div>
-                dont have an account? SignUp <Link to='/sign-up'>here</Link>
+                dont have an account? SignUp <Link to='/sign-up' id='sign-here'>here</Link>
             </div>
         </div>
     )

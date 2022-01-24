@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from 'react-router-dom'
-// import { connect } from "react-redux";
-// import { useHistory } from "react-router-dom";
 
 
 
@@ -38,7 +36,7 @@ const SignUp = (props) => {
                 </form>
             </div>
             <div>
-                already have an account? SignIn <Link to='/'>here</Link>
+                already have an account? SignIn <Link to='/' id='sign-here'>here</Link>
             </div>
         </div>
     )
