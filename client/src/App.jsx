@@ -45,18 +45,16 @@ function App(props) {
   const handleSignUp = (e) => {
     e.preventDefault()
     history.push('/')
-    console.log(props.userState.newUser)
     props.takeNewUser(props.userState.newUser)
-    // props.takeNewUser(JSON.stringify({[e.target.name]: e.target.value}))
   }
 
 
   return (
 
-    <div>
+    <div className='body'>
       {props.userState.isLoggedin === true ?       
       <div>
-        <div className='nav-bar'>
+        <div>
           <NavBar />
         </div>
         <div className='app-body'>
@@ -71,7 +69,7 @@ function App(props) {
       
       : 
       
-      <div>
+      <div id="sign-page">
         <Switch>
           <Route exact path='/' >
             <SignIn 
@@ -84,11 +82,12 @@ function App(props) {
               userName={props.userState.newUser.name}
               handleChange={handleChange}
               handleSignUp={handleSignUp}
+              
             />          
           </Route>
         </Switch>
       </div>}
-      <div className='footer'>
+      <div id='footer'>
         <h6>DISCLAIMER: THIS IS NOT A GOVERMENT SITE</h6>
       </div>
     </div>

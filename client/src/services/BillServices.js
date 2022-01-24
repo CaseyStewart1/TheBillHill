@@ -1,10 +1,7 @@
 import axios from 'axios';
 import Client from '.';
-// require('dotenv').config()
 
 const key = process.env.REACT_APP_API_KEY;
-console.log(process.env.REACT_APP_API_KEY);
-console.log(key);
 export const GetBills = async () => {
   try {
     const response = await axios.get(
@@ -63,7 +60,6 @@ export const GetBillById = async (billId) => {
         }
       }
     );
-    // console.log(billId)
     return response.data.results;
   } catch (error) {
     throw error;
@@ -80,14 +76,13 @@ export const GetStatements = async () => {
         }
       }
     );
-    // console.log(response)
     return response.data.results;
   } catch (error) {
     throw error;
   }
 };
 
-export const GetUserById = async () => {
+export const GetUser = async () => {
   try {
     const response = await Client.get(`/users/`);
     return response.data;
@@ -104,3 +99,21 @@ export const PostUser = async (user) => {
     throw error;
   }
 };
+
+export const DeleteUser = async (id) => {
+  try {
+    const response = await Client.delete(`users/${id}`)
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}
+
+export const UpdateUser = async (id, form) => {
+  try {
+    const response = await Client.put(`users/${id}`, form)
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}

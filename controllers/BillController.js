@@ -12,5 +12,3 @@ const GetAllBills = async (req, res) => {
 module.exports = {
   GetAllBills
 };
-
-// FAKE CODE!!!!!

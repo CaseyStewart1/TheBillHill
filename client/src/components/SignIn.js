@@ -1,58 +1,38 @@
 import React from 'react'
-// import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-// import { LogIn } from '../store/actions/UserAction'
 
-
-
-// const mapStateToProps = (state) => {
-//     // console.log(state)
-//     return {
-//       userState: state.userState
-//     }
-//   }
-  
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//       logIn: () => dispatch(LogIn())
-//     }
-//   }
 
 
 
 const SignIn = (props) => {
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault()
-    //     props.logIn()
-    // }
-    
+  
 
     return (
-        <div>
-            <div>
-                sign in here
+        <div id='sign-page-s'>
+            <div id='sign-page-s'>
+                <h4 id='sign-page-s'>Sign in here</h4>
             </div>
             <div>
-                <form>
-                    <div>
+                <form id='sign-page-s'>
+                    <div id='sign-page-s'>
                         <input
                         type='text'
                         placeholder='Email'
-                        
+                        id='sign-input'
                         />
                     </div>
-                    <div>
+                    <div id='sign-page-s'>
                         <input 
                         type='text'
                         placeholder='Username'
+                        id='sign-input'
                         />
                     </div>
                     <button onClick={props.handleLogIn}> Submit </button>
                 </form>
             </div>
-            <div>
-                dont have an account? SignUp <Link to='/sign-up'>here</Link>
+            <div id='sign-page-s'>
+                Dont have an account? SignUp <Link to='/sign-up' id='sign-here'>here</Link>
             </div>
         </div>
     )

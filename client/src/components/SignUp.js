@@ -1,63 +1,44 @@
 import React from "react";
 import { Link } from 'react-router-dom'
-// import { connect } from "react-redux";
-// import { useHistory } from "react-router-dom";
 
 
 
 
 const SignUp = (props) => {
 
-    // const history = useHistory()
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault()
-    //     history.push('/')
-    // }
-
 
     return (
-        <div>
+        <div id='sign-page-s'>
             <div>
-                sign up here
+                <h4 id='sign-page-s'>Sign up here</h4>
             </div>
             <div>
-                <form>
-                    <div>
+                <form id='sign-page-s'>
+                    <div id='sign-page-s'>
                         <input
                         type='text'
                         name="name"
                         value={props.userName}
                         placeholder='Username'
                         onChange={props.handleChange}
+                        id='sign-input'
                         />
                     </div>
-                    <div>
+                    <div id='sign-page-s'>
                         <input 
                         type='text'
                         name="email"
                         value={props.email}
                         placeholder='Email'
                         onChange={props.handleChange}
+                        id='sign-input'
                         />
                     </div>
-                    {/* <div>
-                        <input 
-                        type='text'
-                        placeholder='Password'
-                        />
-                    </div>
-                    <div>
-                        <input 
-                        type='text'
-                        placeholder='Confirm Password'
-                        />
-                    </div> */}
                     <button onClick={props.handleSignUp}> Submit </button>
                 </form>
             </div>
-            <div>
-                already have an account? SignIn <Link to='/'>here</Link>
+            <div id='sign-page-s'>
+                Already have an account? SignIn <Link to='/' id='sign-here'>here</Link>
             </div>
         </div>
     )
